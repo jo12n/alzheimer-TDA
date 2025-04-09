@@ -1,3 +1,10 @@
+import numpy as np
+import scipy as sp
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import tadasets
+import persim
+
 def barcode2(serie):
     tam_serie = len(serie)
     ind_ord = np.argsort(serie)
