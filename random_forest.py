@@ -35,14 +35,14 @@ def load_PL(folder_path, label):
             labels.append(label)
     return data, labels
 
-data_alz, label_alz = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_006\PL_alz", label=0)
-data_control, label_control = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_006\PL_control", label=1)
+data_alz, label_alz = load_PL(fr"D:\PL_article\datos_alz\PL_006\PL_alz", label=0)
+data_control, label_control = load_PL(fr"D:\PL_article\datos_alz\PL_006\PL_control", label=1)
 
-data_alz2, label_alz2 = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_007\PL_alz", label=0)
-data_control2, label_control2 = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_007\PL_control", label=1)
+data_alz2, label_alz2 = load_PL(fr"D:\PL_article\datos_alz\PL_007\PL_alz", label=0)
+data_control2, label_control2 = load_PL(fr"D:\PL_article\datos_alz\PL_007\PL_control", label=1)
 
-data_alz3, label_alz3 = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_008\PL_alz", label=0)
-data_control3, label_control3 = load_PL(fr"D:\Mates\Master\TFM\datos_alz\PL_008\PL_control", label=1)
+data_alz3, label_alz3 = load_PL(fr"D:\PL_article\datos_alz\PL_008\PL_alz", label=0)
+data_control3, label_control3 = load_PL(fr"D:\PL_article\datos_alz\PL_008\PL_control", label=1)
 
 datos2 = data_alz2 + data_control2
 datos3 = data_alz3 + data_control3
@@ -63,13 +63,6 @@ for i in range(0,len(datos)):
     datos[i] = datos[i].values
     datos2[i] = datos2[i].values
     datos3[i] = datos3[i].values
-    """
-    datos[i] = np.vstack(datos[i].T)
-    scaler = StandardScaler()
-    datos[i] = scaler.fit_transform(datos[i])
-    pca = PCA(n_components=500)
-    datos[i] = pca.fit_transform(datos[i])
-    """
     datos[i] = datos[i].flatten()
     datos2[i] = datos2[i].flatten()
     datos3[i] = datos3[i].flatten()
